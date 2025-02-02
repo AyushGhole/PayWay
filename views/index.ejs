@@ -86,12 +86,18 @@
       <h3>Looking for PayWay bussiness Solutions?</h3>
       <h5>Across regions and the world , we are here to support you.</h5>
     </div>
-
-    <div class="subDiv1">
-      <a href="/main/login" class="badge rounded-pill text-bg-primary" style="text-decoration: none;">
-        PayWay For Bussiness
+    <% if( currUser) { %>
+      <a href="/main/<%= currUser._id %>/dashboard" style="text-decoration: none; color: white;">
+        <button type="button" class="btn btn-primary ms-2">Let's Begin</button>
       </a>
-    </div>
+
+      <% } %>
+
+        <div class="subDiv1">
+          <a href="/main/login" class="badge rounded-pill text-bg-primary" style="text-decoration: none;">
+            PayWay For Bussiness
+          </a>
+        </div>
   </div>
 
   <!-- Third Content Declaration -->
