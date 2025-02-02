@@ -71,8 +71,8 @@ module.exports.renderUserLayout = async (req, res) => {
   let bankDetails = await BankDetails.findById(bank[1]);
   let trans = User.Transactions;
   let transactions = await Transaction.findById(trans);
-  console.log("trem", transactions);
-  console.log("transactions length", trans.length);
+  // console.log("trem", transactions);
+  // console.log("transactions length", trans.length);
   let details = await paywayUser
     .findById(id)
     .populate({ path: "Transactions" });

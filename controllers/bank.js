@@ -41,9 +41,6 @@ module.exports.renderPaymentMethod = async (req, res) => {
   let bank = await User.BankDetails;
   let bankKnown = await BankDetails.findById(bank[0]);
   let bankDetails = await BankDetails.findById(bank[1]);
-  console.log("Bank Details[0]", bankKnown);
-  console.log("Bank Details[1]", bankDetails);
-  console.log(bank.length);
   res.render("paymentMethodDisplay.ejs", {
     bank,
     bankKnown,
@@ -59,19 +56,21 @@ module.exports.renderPaymentPage = (req, res) => {
 
 // Saving details
 module.exports.saveDetails = async (req, res) => {
-  let { id } = req.params;
-  let User = await paywayUser.findById(id);
-  let { To, AccountHolderName, Amount } = req.body;
-  let transactions = new Transaction({ To, AccountHolderName, Amount });
-  let account = await User.BankDetails;
-  console.log(account);
-  let bankDetails = await BankDetails.findById(account[1]);
-  console.log(bankDetails);
-  console.log(transactions);
-  await User.Transactions.push(transactions);
-  await User.save();
-  await transactions.save();
-  res.render("verifyDetails.ejs", { bankDetails, transactions, User, id });
+  try {
+    let { id } = req.params;
+    let User = await paywayUser.findById(id);
+    let { To, AccountHolderName, Amount } = req.body;
+    let transactions = new Transaction({ To, AccountHolderName, Amount });
+    let account = await User.BankDetails;
+    let bankDetails = await BankDetails.findById(account[1]);
+
+    await User.Transactions.push(transactions);
+    await User.save();
+    await transactions.save();
+    res.render("verifyDetails.ejs", { bankDetails, transactions, User, id });
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 // edit details
@@ -81,9 +80,9 @@ module.exports.editTransactions = async (req, res) => {
   let account = await User.BankDetails;
   let amount = await BankDetails.findById(account[1]);
   let trans = await User.Transactions;
-  let transactions = await Transaction.findById(trans);
-  console.log("User Transactions Details : ", amount);
-  console.log("transactions details :", transactions);
+  let lastId = trans.length - 1;
+
+  let transactions = await Transaction.findById(trans[lastId]);
 
   if (amount.Amount > transactions.Amount) {
     amount.Amount = amount.Amount - transactions.Amount;
@@ -91,7 +90,6 @@ module.exports.editTransactions = async (req, res) => {
     console.log("Updated Bank Details : ", amount);
     transactions.Status = "success";
     await transactions.save();
-    console.log("Updated transactions :", transactions);
   } else {
     transactions.Status = "failed";
     await transactions.save();

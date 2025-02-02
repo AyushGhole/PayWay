@@ -23,6 +23,6 @@ router
   .route("/:id/payMoney")
   .get(bankConrollers.renderPaymentPage)
   .post(bankConrollers.saveDetails)
-  .patch(bankConrollers.editTransactions);
+  .put(bankConrollers.editTransactions);
 
 module.exports = router;
