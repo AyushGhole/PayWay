@@ -1,0 +1,237 @@
+
+/* Sliders Styles  */
+#carouselExampleCaptions{
+  width: 100% !important;  
+}
+
+.carousel-item{
+  height: 30rem !important; 
+  width: 100% !important;
+  margin: 0 !important;  
+
+}
+
+ .carousel-item img{
+  height: 100% !important;
+  width: 100% !important; 
+} 
+.btn:hover{
+   opacity: 0.5 !important;
+}
+
+
+.mainCard{
+  background-color: #001435;  
+  color: white;
+  padding: 2rem ; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subDiv{
+  margin-left: 1.5rem !important;
+}
+.badge{
+  padding:0.7rem 1rem !important; 
+  font-size: 1rem !important;
+  margin-right: 1rem !important;
+}
+.row{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; 
+  font-weight: 900; 
+  font-family:  "DM Serif Text", serif; 
+  font-size: 2rem; 
+  color: #001435; 
+  margin: 1.6rem !important; 
+}
+
+.cardMain{
+  display: flex; 
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+.card-title{
+  color: #001C64 !important;
+}
+
+.card{
+  border: none !important;
+}
+
+.card img{
+  border-radius: 1rem !important;
+}
+
+.card a {
+  text-decoration: none !important;
+}
+.first{
+  display: flex; 
+  justify-content: center ; 
+  align-items: center;
+}
+ 
+.first h3{
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.featuesDiv{
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  font-size: 0.71rem; 
+}
+
+
+.fourthDiv{
+  padding: 0.71rem; 
+}
+
+.brands{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 1rem !important;
+}
+
+.brands img{
+  height: 2rem !important;
+  margin: 1rem;
+}
+.fiveth{
+  text-align: center; 
+  padding: 3rem; 
+  background-color: #0070E0;
+  font-size: 3rem; 
+  font-weight: 800; 
+  color: white;
+} 
+
+.fiveth button{
+  color: #001C64 !important;
+  border: none !important;
+}
+
+.footerText{
+  font-size: 1rem !important;
+  font-weight: 100 !important; 
+  padding: 1.4rem ;
+}
+.mainThird{
+  background-color: #001435; 
+  padding: 1rem;
+  color: white;
+  display: flex; 
+  align-content: center; 
+  justify-content: space-around; 
+  margin-top:3.5rem !important;
+}
+
+.mainThird img{
+    margin-top: 3.5rem !important;
+   border-radius: 1rem; 
+
+}
+.firstDiv{
+  padding: 1rem;
+}
+
+/* Credit Card Image */ 
+.imageCard {
+  height:25rem !important;
+  width: 100% !important; 
+  border: 1px solid black; 
+  background-image: url("hero-in-noncookied.jpg");
+  background-position: center !important;
+  background-size: cover !important;
+  background-clip: padding-box !important;
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+}
+.cardIMG{
+  display: flex  !important;
+  justify-content: center !important; 
+  align-content: center !important;
+}
+.cardIMG img{
+  border-radius: 5px !important;
+  height: 20rem; 
+  width: 20rem ;
+  box-shadow: 7px 0 7px 0 #001435;
+  margin-right: 1rem !important;
+}
+
+/* Video Styling */
+.video{
+ padding: 0.51rem !important;
+ background-color: white !important;
+ border-radius: 5px !important;
+}
+
+.main{ 
+  width: 23%; 
+  border-right: 1px solid #0070E0;
+  height: 45rem !important;
+  padding: 1rem !important; 
+  background-color: #ebeef2;
+} 
+.main ul{
+  background-color: #ebeef2;
+}
+.nav-link{
+  margin-left: 1.4rem !important;
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.mainBody{
+  display: flex; 
+}
+
+.orderForm{
+  width: 130% !important;
+}
+
+/* Receipt Styling */
+.thank-you-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 2rem ;
+  text-align: center;
+  width: 500px;
+  margin: 2rem !important;
+  margin-left: 7rem !important;
+  border-top: 2px solid #0070E0 !important;
+}
+
+h1 {
+  color: #4CAF50;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.order-details {
+  margin: 20px 0;
+}
+
+button {
+  background-color: #0070E0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

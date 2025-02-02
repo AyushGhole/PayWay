@@ -1,0 +1,43 @@
+<% layout("/layouts/sidebar1.ejs") %>
+
+  <body>
+    <div class="thank-you-container">
+
+      <% if (transactions.Status=="success" ){ %>
+        <h1 style="color: green;">
+          <%= transactions.Status %>
+        </h1>
+        <% } %>
+          <% if(transactions.Status=="failed" ){ %>
+            <h1 style="color: red;">
+              <%= transactions.Status %>
+            </h1>
+            <% } %>
+
+              <hr />
+              <div class="order-details">
+                <!-- Receiver Person Name -->
+                <p>Applicant Name: <span id="order-number">
+                    <%=transactions.AccountHolderName %>
+                  </span></p>
+                <!-- Transaction Id  -->
+                <p>Transaction Id: <span id="order-number">
+                    <%=transactions._id %>
+                  </span></p>
+
+                <!-- To Account Number Address -->
+                <p>To Account Number : <span id="order-number">
+                    <%=transactions.To %>
+                  </span></p>
+
+                <!--From Account Number Address -->
+                <p>From Account Number: <span id="delivery-date">
+                    <%=amount.AccountNumber %>
+                </p>
+              </div>
+
+              <!-- Continue Shoping -->
+              <form action="/main/<%= id %>/dashboard">
+                <button>Return to Daashboard</button>
+              </form>
+    </div>

@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate.ejs") %>
+  <!-- form declarations -->
+  <form method="POST" action="/main/login">
+    <div class="row">
+      <div class="col-6 offset-0">
+        <h3 class="offset-4" style="margin-top: 2rem;"><i class="fa-solid fa-user-plus"></i>Login to Pay Way</h3>
+        <hr style="color: blue;" />
+
+        <!-- username declarations -->
+        <label for="username" class="form-label" style="font-weight: 100;">Username : </label>
+        <input type="text" name="username" placeholder="ayushghole" class="form-control" id="username" />
+        <br />
+        <!-- password declarations -->
+        <label for="password" class="form-label" style="font-weight: 100;">Password : </label>
+        <input type="password" name="password" placeholder="ayush@1222" class="form-control" id="password" />
+        <br />
+        <button class="btn btn-success">Login</button>
+
+        <hr style="color: blue;" />
+
+      </div>
+    </div>
+
+  </form>

@@ -1,0 +1,29 @@
+<% layout("/layouts/sidebar1.ejs") %>
+
+
+  <form method="POST" action="/main/<%= currUser._id %>/add_bank">
+    <div class="orderForm" style="max-width: 1000px; margin: 2rem; margin-left: 10rem;">
+
+      <h3 class="offset-4" style="margin-top: 0.61rem;"><i class="fa-solid fa-building-columns"></i>Add Bank
+        Details</h3>
+      <hr style=" color: blue;" />
+      <!-- Bank Name declarations -->
+      <label for="BankName" class="form-label" style="font-weight: 100;">Bank Name : </label>
+      <input type="text" name="BankName" placeholder="Bank Of India" class="form-control" id="BankName" required />
+      <br />
+
+      <!-- IFSC declarations -->
+      <label for="IFSC" class="form-label" style="font-weight: 100;">IFSC Code : </label>
+      <input type="text" name="IFSC" placeholder="Ifsc code" class="form-control" id="IFSC" required />
+      <br />
+
+      <!-- Branch declarations -->
+      <label for="Branch" class="form-label" style="font-weight: 100;">Branch : </label>
+      <input type="text" name="Branch" placeholder="Branch " class="form-control" id="Branch" required />
+      <br />
+
+
+      <button class="btn btn-success">Submit</button>
+      <hr style=" color: blue;" />
+    </div>
+  </form>

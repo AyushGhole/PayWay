@@ -1,0 +1,59 @@
+<% if( !currUser){ %>
+  <% layout("/layouts/sidebar.ejs") %>
+    <% } %>
+
+      <% if( currUser){ %>
+        <% layout("/layouts/sidebar1.ejs") %>
+          <% } %>
+
+
+            <!-- form declarations -->
+            <form method="POST" action="/main/<%= currUser._id %>/details">
+              <div class="row orderForm">
+                <div class="col-6">
+                  <h3 class="offset-2" style="margin-top: 0.61rem;">Place Your Order</h3>
+                  <hr style="color: blue;" />
+
+                  <!-- name declarations -->
+                  <label for="name" class="form-label" style="font-weight: 100;font-size: 1rem;">Name : </label>
+                  <input type="text" name="name" placeholder="ayushghole" class="form-control" id="name" />
+
+                  <!-- email declarations -->
+                  <div class="row">
+                    <div class="col-5">
+                      <label for="email" class="form-label"
+                        style="font-weight: 100;font-size: 1rem; margin-right: 1rem;">Email
+                        :
+                      </label>
+                      <input type="email" name="email" placeholder="ayush@1222" class="form-control" id="email" />
+                    </div>
+                    <div class="col-7">
+                      <label for="floatingSelectGrid" class="form-label"
+                        style="font-weight: 100;font-size: 1rem; margin-left: 0;">Product :
+                      </label>
+                      <select class="form-select" name="product" id="floatingSelectGrid">
+                        <option value="0">select</option>
+                        <option name="Premium Credit Card" value="Premium Credit Card">Premium Credit Card</option>
+                        <option name="Classic Credit Card" value="Classic Credit Card">Classic Credit Card</option>
+                        <option name="International Credit Card" value="International Credit Card">International Credit
+                          Card</option>
+                        <option name="Premium Credit Card" value="Premium Debit Card">Premium Debit Card</option>
+                        <option name="Classic Credit Card" value="Classic Debit Card">Classic Debit Card</option>
+                        <option name="International Credit Card" value="International Debit Card">International Debit
+                          Card</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Address Field Declaration -->
+                  <label for="address" class="form-label" style="font-weight: 100;font-size: 1rem;">Address : </label>
+                  <textarea type="text" name="address" placeholder="enter your address" class="form-control"
+                    id="address"></textarea>
+
+
+                  <button class="btn btn-success">Place Order</button>
+
+                  <hr style="color: blue;" />
+                </div>
+              </div>
+            </form>

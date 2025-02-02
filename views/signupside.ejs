@@ -1,0 +1,39 @@
+<% layout("/layouts/sidebar.ejs") %>
+
+  <form method="POST" action="/main/signupPage">
+
+    <div class="orderForm" style="max-width: 1000px; margin: 2rem; margin-left: 10rem;">
+      <h3 class="offset-4" style="margin-top: 2rem;">SignUp to Pay Way</h3>
+      <hr style="color: blue;" />
+
+      <!-- username declarations -->
+      <label for="username" class="form-label" style="font-weight: 100; font-size: 1rem;">Create Username : </label>
+      <input type="text" name="username" placeholder="ayushghole" class="form-control" id="username" />
+      <br />
+      <!-- email declarations -->
+      <label for="email" class="form-label" style="font-weight: 100; font-size: 1rem;">Enter Your Email : </label>
+      <input type=" email" name="email" placeholder="ayush@gmail.com" class="form-control" id="email" />
+      <br />
+      <!-- password declarations -->
+      <label for="password" class="form-label" style="font-weight: 100; font-size: 1rem;">Password : </label>
+      <input type="password" name="password" placeholder="ayush@1222" class="form-control" id="password" />
+      <br />
+      <div class="form-check">
+        <input class="form-check-input mt-4" type="checkbox" value="" id="invalidCheck" style="font-size: 1rem;"
+          required />
+        <label class="form-check-label" for="invalidCheck"
+          style="font-weight: 100; font-size: 1rem; margin-top: 1.3rem;">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+        <br />
+        <br />
+        <button class="btn btn-success ms-0">Sigup</button>
+      </div>
+
+      <hr style="color: blue;" />
+
+    </div>
+  </form>

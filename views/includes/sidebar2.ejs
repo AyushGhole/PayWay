@@ -1,0 +1,38 @@
+<section class="left  bg-body-tertiary" style="height: 34rem; padding: 1rem; border-right: 1px solid #ebeef2;">
+
+
+  <nav class="nav nav-pills flex-column">
+    <ul>
+      <li><a class="nav-link " id="login" href="/main/<%= currUser._id %>/dashboard">
+          <b> @<%= currUser.username %> </b>
+        </a></li>
+      <hr />
+      <li> <a class="nav-link side" id="l=SignUp" href="/main/<%= currUser._id %>/dashboard"><small>Overview
+          </small></a>
+      </li>
+      <li> <a class="nav-link side" id="Order" href="/main/<%=currUser._id %>/details"><small>Order</small></a></li>
+      <li> <a class="nav-link side" id="complaint" href="/main/<%=currUser._id %>/complaint"><small>Raise
+            Complaints</small></a>
+      </li>
+      <li><a class="nav-link side" id="l=SignUp" href="/main/<%= currUser._id %>/payment_method"><small>Payment
+            Method</small> </a></li>
+      <li><a class="nav-link side" id="l=SignUp" href="/main/<%= currUser._id %>/add_bank"><small>Add Bank</small></a>
+      </li>
+      <li><a class="nav-link side" href=""><small>Setting</small></a></li>
+      <li><a class="nav-link side" href=""><small>Contact Us</small></a></li>
+    </ul>
+  </nav>
+</section>
+
+<!-- Javascript code for background color  -->
+<script>
+  const sideOption = document.querySelectorAll(".side");
+  console.log(sideOption);
+
+  sideOption.forEach((option) => {
+    option.addEventListener("click", () => {
+      option.style.backgroundColor = "blue";
+    })
+  })
+
+</script>

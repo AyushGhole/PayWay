@@ -1,0 +1,31 @@
+<% layout("/layouts/sidebar1.ejs") %>
+
+
+  <form method="POST" action="/main/<%= currUser._id %>/">
+    <div class="orderForm" style="max-width: 1000px; margin: 2rem; margin-left: 10rem;">
+
+      <h3 class="offset-4" style="margin-top: 0.61rem;"><i class="fa-solid fa-building-columns"></i>Add Account Details
+      </h3>
+      <hr style=" color: blue;" />
+      <!-- DebitCard declarations -->
+      <label for="DebitCard" class="form-label" style="font-weight: 100;">Debit Card : </label>
+      <input type="number" name="DebitCard" placeholder="DebitCard" class="form-control" id="DebitCard" required />
+      <br />
+
+
+      <!-- Account Number declarations -->
+      <label for="AccountNumber" class="form-label" style="font-weight: 100;">Account Number: </label>
+      <input type="number" name="AccountNumber" placeholder="accountnumber" class="form-control" id="AccountNumber"
+        required />
+      <br />
+
+      <!-- Amount declarations -->
+      <label for="Amount" class="form-label" style="font-weight: 100;">Account Balance : </label>
+      <input type="number" name="Amount" placeholder="Balance Amount" class="form-control" id="Amount" req />
+      <br />
+
+
+      <button class="btn btn-success">Submit</button>
+      <hr style=" color: blue;" />
+    </div>
+  </form>

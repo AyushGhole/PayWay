@@ -1,0 +1,36 @@
+<% layout("/layouts/sidebar1.ejs") %>
+
+  <body>
+    <div class="thank-you-container">
+      <h1>Thank You!</h1>
+      <p>Your order has been successfully placed.</p>
+      <div class="order-details">
+        <!-- Order Person Name -->
+        <p>Applicant Name: <span id="order-number">
+            <%=newOrder.name %>
+          </span></p>
+        <!-- Order Id  -->
+        <p>Order Number: <span id="order-number">
+            <%=newOrder._id %>
+          </span></p>
+
+        <!-- Order Product  -->
+        <p>Product : <span id="order-number">
+            <%=newOrder.product %>
+          </span></p>
+
+        <!-- Shipping Address -->
+        <p>Shipping Address : <span id="order-number">
+            <%=newOrder.address %>
+          </span></p>
+
+        <!-- Estimateed Delivery Dates -->
+        <p>Estimated Delivery: <span id="delivery-date">
+            (Within 15 Days From Order Date)</p>
+      </div>
+
+      <!-- Continue Shoping -->
+      <form action="/main/<%= id %>/dashboard">
+        <button>Return to Daashboard</button>
+      </form>
+    </div>

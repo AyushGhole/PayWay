@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" style="border-bottom: 1px solid #caebe7">
+  <div class="container-fluid">
+    <!-- Website Icons and Name declaration -->
+    <a class="icons" href="/main" style="margin-left: 1rem; font-size: 2rem"><i class="fa-brands fa-paypal"></i></a>
+    <div>
+      <a style="
+          font-size: 1.2rem;
+          margin-left: 1rem;
+          color: rgb(36, 162, 221);
+          margin-right: 0;
+        "><i>Pay</i></a>
+      <a style="
+          font-size: 1.2rem;
+          margin-right: 1rem;
+          color: blue;
+          margin-left: 0;
+        "><i>Way</i>
+      </a>
+      </a>
+    </div>
+
+    <!-- Toggler button declaration -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content declaration -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Login link declaration -->
+        <li class="nav-item">
+          <a class="nav-link active" href="/main/login">Login</a>
+        </li>
+
+        <!-- SignUp link declaration -->
+        <li class="nav-item">
+          <a class="nav-link" href="/main/signup">SignUp</a>
+        </li>
+
+        <!-- Dropdown list -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Features
+          </a>
+          <!-- Features dropdown options declaration -->
+          <!-- User not present -->
+          <% if(!currUser){ %>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/main">Pay</a></li>
+              <li><a class="dropdown-item" href="/main">Bank Transfer</a></li>
+            </ul>
+        </li>
+        <% } %>
+          <!-- User is present -->
+          <% if(currUser){ %>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/main/<%= currUser._id%>/payMoney">Pay</a></li>
+              <li><a class="dropdown-item" href="/main/<%= currUser._id%>/payMoney">Bank Transfer</a></li>
+            </ul>
+            </li>
+            <% } %>
+
+              <!-- Products  -->
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Products
+                </a>
+
+                <!-- Products features declaration -->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/main/creditCard">Credit Cards</a></li>
+                  <li><a class="dropdown-item" href="/main/debitCard">Debit Cards</a></li>
+                </ul>
+              </li>
+      </ul>
+
+      <% if( !currUser) { %>
+        <form class="d-flex" role="search">
+          <!--  Search input declaration -->
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+
+          <!-- Search  Field declaration-->
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <% } %>
+          <% if(currUser) { %>
+            <span class="userText">
+              <small> @<%= currUser.username %> </small>
+            </span>
+            &nbsp; &nbsp;
+            <form method="GET" action="/main/logout">
+              <button class="btn btn-outline-primary">LogOut</button>
+            </form>
+            <% } %>
+    </div>
+  </div>
+</nav>

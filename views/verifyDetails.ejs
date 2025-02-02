@@ -1,0 +1,50 @@
+<% layout("/layouts/sidebar1.ejs") %>
+
+  <div class="thank-you-container">
+
+    <div class="headin">
+      <div class="image"></div>
+
+      &nbsp; <h3 style="margin-top: 0.61rem;color: blue; ">Send Money</h3>
+    </div>
+    <hr />
+
+    <form method="POST" action="/main/<%= currUser.id%>/payMoney?_method=PATCH">
+      <!-- From Sender's Account Number -->
+      <p>Refernce No: <span id="order-number">
+          <b>
+            &nbsp; <%=transactions.id %>
+          </b>
+        </span></p>
+      <!-- From Sender's Account Number -->
+      <p>From Account Number: <span id="order-number">
+          <b>
+            &nbsp; <%=bankDetails.AccountNumber %>
+          </b>
+        </span></p>
+
+      <!-- To Account Details -->
+      <p>To Account Number: <span id="order-number">
+          <b>
+            &nbsp; <%=transactions.To %>
+          </b>
+        </span></p>
+
+      <!-- Account Holder Details -->
+      <p>Account Holder Number: <span id="order-number">
+          <b>
+            &nbsp; <%=transactions.AccountHolderName%>
+          </b>
+        </span></p>
+
+      <!-- Transaction Amounts -->
+      <p>Amount : <span id="order-number">
+          <b>
+            &nbsp; &#8377; <%=transactions.Amount %>
+          </b>
+        </span></p>
+      <hr />
+      <button class="btn btn-primary">Verify</button>
+
+    </form>
+  </div>

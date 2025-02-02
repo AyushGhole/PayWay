@@ -1,0 +1,28 @@
+<% if( !currUser){ %>
+  <% layout("/layouts/sidebar.ejs") %>
+    <% } %>
+
+      <% if( currUser){ %>
+        <% layout("/layouts/sidebar1.ejs") %>
+          <% } %>
+
+
+
+            <form method="POST" action="/main/<%= currUser._id %>/complaint">
+              <div class="orderForm" style="max-width: 1000px; margin: 2rem; margin-left: 10rem;">
+
+                <h3 class="offset-4" style="margin-top: 0.61rem;">Raise Your Complaint</h3>
+                <hr style=" color: blue;" />
+                <!-- username declarations -->
+                <label for="username" class="form-label" style="font-weight: 100;">Username : </label>
+                <input type="text" name="username" placeholder="ayushghole" class="form-control" id="username" />
+                <br />
+                <!-- Complaints field -->
+                <label for="complaint" class="form-label" style="font-weight: 100;">Complaint : </label>
+                <textarea type="text" name="complaint" placeholder="let me know" class="form-control" id="complaint"
+                  cols="26" rows="5"></textarea>
+                <br />
+                <button class="btn btn-success">Submit</button>
+                <hr style=" color: blue;" />
+              </div>
+            </form>
