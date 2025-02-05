@@ -1,6 +1,6 @@
 <b>Description :</b><br>
 
-PayWay.in is a modern electronic banking system built using the MERN stack (MongoDB, Express.js, React, Node.js) with an MVC architecture, designed for seamless, secure, and user-friendly digital transactions. It offers real-time balance updates, secure JWT-based authentication, and a responsive UI powered by Bootstrap CDN. With features like fund transfers, payment processing, and AI-driven financial insights (future scope), PayWay aims to revolutionize digital banking. The system ensures high security with Bcrypt.js password hashing, optimized API performance, and scalability with deployments on Vercel (frontend), Render (backend), and MongoDB Atlas (database). Future enhancements include mobile app development, multi-currency and crypto support, automated bill payments, and advanced security features like 2FA and fraud detection, making PayWay a next-gen banking solution. 🚀
+PayWay.in is a modern electronic banking system built using the MERN stack (MongoDB, Express.js, React, Node.js) with an MVC architecture, designed for seamless, secure, and user-friendly digital transactions. It offers real-time balance updates, secure passport-based authentication, and a responsive UI powered by Bootstrap CDN. With features like fund transfers, payment processing, and AI-driven financial insights (future scope), PayWay aims to revolutionize digital banking. Optimized API performance, and scalability with deployments on Vercel (frontend), Render (backend), and MongoDB Atlas (database). Future enhancements include mobile app development, multi-currency and crypto support, automated bill payments, and advanced security features like 2FA and fraud detection, making PayWay a next-gen banking solution. 🚀
 <br>
 <hr>
 <b>Front View : </b> 
@@ -20,6 +20,15 @@ Building PayWay.in follows a structured approach using the MERN stack (MongoDB, 
 <br>
 <b>Send Money Page : </b>
 <img src="/public/sendmoney.png" alt="sendMoneyPage">
+<hr>
+<br>
+<b>Core Features </b><br>
+✅ Secure User Authentication (Passport Packages) <br>
+✅ Real-time Transactions & Balance Updates <br>
+✅ User-Friendly Dashboard with Bootstrap UI <br>
+✅ Fund Transfers & Payment Processing <br>
+✅ AI-Powered Financial Insights (Future Scope) <br>
+✅ Multi-Currency & Crypto Support (Upcoming) <br>
 <hr>
 <br>
 <b> What’s Next?</b> <br>
